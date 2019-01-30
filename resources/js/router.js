@@ -24,6 +24,8 @@ import UserView from './components/admin/pages/users/view'
 
 import Category from './components/admin/pages/categories/index'
 import CategoryCreate from './components/admin/pages/categories/create'
+import CategoryUpdate from './components/admin/pages/categories/update'
+import CategoryView from './components/admin/pages/categories/view'
 
 const routes = [
     {
@@ -63,7 +65,9 @@ const routes = [
             {path: 'user/:slug/view', component: UserView, name: 'UserView'},
 
             {path: 'category', component: Category},
-            {path: 'category/create', component: CategoryCreate}
+            {path: 'category/create', component: CategoryCreate},
+            {path: 'category/:slug/update', component: CategoryUpdate, name: 'CategoryUpdate'},
+            {path: 'category/:slug/view', component: CategoryView, name: 'CategoryView'}
         ]
     }
 ]

@@ -128,6 +128,7 @@ class CategoryController extends Controller
         if(Auth::user()->can('delete-category')) {
             $category = Category::find($id);
             if($category) {
+                $category->products()->delete();
                 if($category->delete()) {
                     return Response::json(['message' => 'Category and all products in it have been deleted']);
                 }
